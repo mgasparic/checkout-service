@@ -76,3 +76,12 @@ curl -X POST localhost:8080/payment \
 ```
 
 4. The payment is collected when the order is shipped.
+
+## Deployment
+
+The microservice can be deployed in a Docker container. To test a production-ready version, run:
+
+```
+docker build --tag checkout:0.0.1 --file ./build/package/Dockerfile .
+docker run --detach --network host --env STORAGE_URL="http://localhost:9000" --env STRIPE_KEY="sk_test_51H59owJmQoVhz82aOUNOuCVbK0u1zjyRFKkFp9EfrqzWaUWqQni3oSxljsdTIu2YZ9XvlbeGjZRU7B7ye2EjJQE000Dm2DtMWD" checkout:0.0.1
+```
