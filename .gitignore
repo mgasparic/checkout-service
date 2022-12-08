@@ -1,0 +1,12 @@
+*.exe
+*.exe~
+*.dll
+*.so
+*.dylib
+*.env
+*.test*
+.run
+.idea
+.vscode/
+terraform.tfstate*
+.terraform*
